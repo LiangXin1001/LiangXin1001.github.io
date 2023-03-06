@@ -68,8 +68,11 @@ div ,section ,article {
 .content ,.navmenu li{
     color:rgb(116, 120, 123);
 }
-.urls ,p{
+.urls {
     color:rgb(164, 166, 168);
+}
+p ,li{
+    color:rgb(100, 101, 101);
 }
 article ,.sidebar ,.sticky{
     display: block;
@@ -108,7 +111,7 @@ article ,.sidebar ,.sticky{
     margin-right: 0;
 } */
 li {
-   color:rgb(164, 166, 168);
+   color:rgb(100, 101, 101);
    font-family:sans-serif;
    list-style: none;
 }
