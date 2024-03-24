@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../icon/iconfont.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="journeyCam.css">
+    <title>Research Projects</title>
+</head>
+<body>
+    <nav class="homenav">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="navmenu" >
+                    <ul class="visible-links">
+                        <li class="navname ">  
+                            <div class="btn-animate btn-animate__underline-from-center">
+                                <a href="../index.html"><b>Xin Liang  ( 梁馨 )</b></a>
+                            </div>
+                             </li>
+                        <!-- <li><div  class="btn-animate btn-animate__underline-from-center">Experience</div></li> -->
+                        <li>
+                            <div class="btn-animate btn-animate__underline-from-center">
+                                <a href="project.html"> <b>Project</b></a>
+                            </div>
+                        </li>
+                        <li><div  class="btn-animate btn-animate__underline-from-center">
+                            <a href="https://liangxin1001.github.io/Xin_Liang_CV.pdf"><b>CV</b></a>
+                            </div>
+                        </li>
+                    </ul>
+                   </div>
+            </div>
+            
+        </div>
+        
+    </nav>
+    
+    <header class="main">
+        <a href="javascript:history.back()" class="back-button">Back to all research projects</a>
+        <h1>AI Agent as Urban Planner: Steering Stakeholder Dynamics in Urban Planning via Consensus-based Multi-Agent Reinforcement Learning</h1>
+    </header>
+    <div class="main">
+        <section class="introduction">
+            <img  class="introimg" src="../images/UrbanAI/actor_critic_framework.png" alt="Introduction Image">
+            <h2>Abstract </h2>
+            <p>In urban planning, land use readjustment plays a pivotal role in aligning land use configurations with the current demands for sustainable urban development. However, present-day urban planning practices face two main issues. Firstly, land use decisions are predominantly dependent on human experts. Besides, while resident engagement in urban planning can promote urban sustainability and livability, it is challenging to reconcile the diverse interests of stakeholders. To address these challenges, we introduce a Consensus-based Multi-Agent Reinforcement Learning framework for real-world land use readjustment. This framework serves participatory urban planning, allowing diverse intelligent agents as stakeholder representatives to vote for preferred land use types. Within this framework, we propose a novel consensus mechanism in reward design to optimize land utilization through collective decision making. To abstract the structure of the complex urban system, the geographic information of cities is transformed into a spatial graph structure and then processed by graph neural networks. Comprehensive experiments on both traditional top-down planning and participatory planning methods from real-world communities indicate that our computational framework enhances global benefits and accommodates diverse interests, leading to improved satisfaction across different demographic groups. By integrating Multi-Agent Reinforcement Learning, our framework ensures that participatory urban planning decisions are more dynamic and adaptive to evolving community needs and provides a robust platform for automating complex real-world urban planning processes.</p>
+            <h2>Urban readjustment modeling </h2>
+           <p>In the Consensus-based Multi-Agent Reinforcement Learning (MARL) framework, agents are distributed across different locations with varied observation ranges. Each agent casts a vote for its preferred land use type. The collective voting outcome determines the land use type to be readjusted in the corresponding urban parcel</p>
+           <img  class="introimg"  width="1476px" height="1181px" src="../images/UrbanAI/marl_vote.png" alt="Introduction Image"> 
+           <h2>Model construction and training </h2>
+            <p>In our framework, we utilize the Actor-Critic architecture. The Actor processes an initial graph to generate an action. Conversely, the Critic takes a combined input of the initial graph and the Actor's output, subsequently producing a score for the action in its current state.</p>
+            <img  class="introimg" width="445px" height="584px" src="../images/UrbanAI/1.jpg" alt="Introduction Image">
+          
+           <h2>Conclusion and future work</h2>
+           <p>In this study, we first present a spatial graph representing the urban landscape, grounded in urban system theory. Utilizing this data structure, we frame the land use readjustment challenge as a Markov decision process for participatory urban planning. Within this context, we develop a multi-agent reinforcement learning framework containing four tiered metrics based on the individual recognition of land use preferences and urban performance, aiming to produce an optimal land use readjustment blueprint that balances stakeholders' varying interests and fosters sustainable urban development. Through comprehensive experiments focused on a case study in Kendall Square, our innovative approach successfully provides an evidence that participatory planning can enhance the optimization of readjustment strategies through equitable collective decision-making. The results underscore notable advancements both in algorithmic performance and in aligning urban readjustment strategies with government directives in real-world scenarios. Furthermore, the consensus-based MARL model not only elevates urban livability but also promotes equity in participatory urban planning.
+
+            In future work, we intend to explore advanced RL techniques and refine reward function strategies to further enhance land use planning and fine-tune the harmonization of stakeholder preferences. Additionally, we plan to integrate this framework into a collaborative platform, drawing upon the expertise of urban professionals, to devise more effective urban planning strategies.</p>
+    
+       
+            <p>Arxiv Link: https://arxiv.org/pdf/2310.16772.pdf</p>
+            <h2>Collaborators </h2>
+ 
+            <p><a href="https://kejiang.city/">Kejiang Qian</a>, 
+                <a href="https://mao1207.github.io/">Lingjun Mao</a>, <b>Xin Liang</b>, Yimin Ding, 
+                <a href="https://architecture.mit.edu/people/jin-gao">Jin Gao</a>, 
+                 Xinran Wei, Ziyi Guo, 
+                <a href="https://www.media.mit.edu/people/jiajie/overview/">Chance Jiajie Li</a> </p>
+            <!--  -->
+        </section>
+
+    </div>
+   <footer class="foot">
+    <div class="foot-contact">
+        <!-- <p class="lifoot" >Follow :</p> -->
+        <li class="lifoot">
+            <i >
+                <span class="iconfont icon-github-fill">&#xe603;</span>
+                <a  class="lifoot" href="https://liangxin1001.github.io/">github</a>
+            </i>
+        </li>
+        
+        <li class="lifoot">
+            <span class="iconfont icon-gmail">&#xe95f;</span>
+            <a class="lifoot" href=" mailto:XinLiang0920@gmail.com"> Gmail : XinLiang0920@gmail.com</a>
+        </li>
+        <li class="lifoot">
+            <i>
+                <span class="iconfont icon-google-scholar">&#xe601;</span>
+                <a class="lifoot" href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=am2rEXcAAAAJ">Google Scholar</a>
+            </i>
+        </li>
+        <div class="schoolimg">
+            <img src="../images/tongji.png" alt="">
+        </div>
+    </div>
+
+   </footer>
+</body>
+</html>

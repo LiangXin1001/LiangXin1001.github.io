@@ -1,0 +1,54 @@
+.project-box {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #FFF7FC; */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  
+.project-box:hover {
+background-color: #f0f0f0;
+transform: scale(1.05);
+}
+
+.project-box img {
+width: 450px;
+height: 250px;
+margin-right: 10px;
+
+}
+
+.project-box p {
+margin: 0;
+font-weight: bold;
+}
+.page-title {
+margin-top: 20px;
+margin-bottom: 30px;
+text-align: center;
+}
+
+.page-title h1 {
+margin-bottom: 0.5em;
+}
+
+.page-title p {
+color: #555;
+font-size: 1.1em;
+}
+
+.video-container {
+  display: flex;
+  justify-content: space-around; /* 水平分布在容器中，周围留有空间。 */
+  align-items: center;
+  margin: auto; /* 使容器在页面中居中。 */
+  max-width: 1200px; /* 设置最大宽度以避免视频过于靠近屏幕边缘。 */
+}
+.video-container iframe {
+  margin: 0 10px; /* 设置左右间距为10px，你可以根据需要调整这个值。 */
+}

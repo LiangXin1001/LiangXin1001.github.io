@@ -1,0 +1,63 @@
+ 
+ /* Adjusts image properties to control their size, ensures they stay in the block formatting context and centers them horizontally */
+.introimg {
+    max-width: 60%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is treated as a block element */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+    margin-bottom: 30px; /* Space below the image */
+}
+
+/* Styles for iframe to center it horizontally and add space below it */
+iframe {
+    display: block; /* Ensures the iframe is treated as a block element */
+    margin-left: auto; /* Center the iframe horizontally */
+    margin-right: auto; /* Center the iframe horizontally */
+    margin-bottom: 40px; /* Space below the iframe */
+    max-width: 100%; /* Prevents the iframe from exceeding the width of its container */
+}
+
+ 
+
+.introimg {
+    max-width: 60%; /* 调整大小，根据您的需求可以是其他值 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+iframe  {
+    margin-bottom: 40px;
+    display: block; /* 将iframe转换为块级元素 */
+    margin: auto; /* 上下保持原有的间距，左右自动（这样会居中块级元素） */
+    max-width: 100%; /* 确保iframe不会超出其容器的宽度 */
+}
+
+
+.image-row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 图片之间的间隔，您可以根据需要调整 */
+}
+  
+  .people {
+    width: calc(10.33% - (20px * 2 / 3)); /* 减去间隙的宽度，确保三张图片平均分配一行 */
+    height: auto; /* 保持图片比例 */
+  }
+  
+
+
+.step {
+    margin-bottom: 20px;
+}
+/* .step h3 {
+    font-size: 1.2em;
+    color: #000066;
+} */
+.step p {
+    text-indent: 2em;
+}
