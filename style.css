@@ -100,14 +100,16 @@ div ,section ,article {
 .urls {
     color:rgb(164, 166, 168);
 }
-p ,li{
+.page li{
     color:rgb(100, 101, 101);
+    text-align: justify; /* 段落两端对齐 */
+    padding-left: 11em;
 }
 article ,.sidebar ,.sticky{
     display: block;
 }
 .sideson {
-    margin-top: 100px;
+    margin-top: 20px;
     background-color:rgb(255, 255, 255);
     margin-bottom: 100px;
 }
@@ -133,11 +135,11 @@ article ,.sidebar ,.sticky{
     padding-bottom: 30px;
 }
 .photo img {
-    width:324px;
-    height: 486px;
+    width:80%;
+    height: 80%;
+    padding-right: 10%;
     background-color:  #FFF7FC;
-    /* border-radius: 100%;
-    border: 1px solid white;  */
+     
 }
 .schoolimg {
     margin-top: 20px;
@@ -152,8 +154,7 @@ article ,.sidebar ,.sticky{
     margin-right: 60px;
 }
 li {
-    /* color: #343297; */
-   /* color:rgb(206,144,140); */
+ 
    font-family:sans-serif;
    list-style: none;
 }
