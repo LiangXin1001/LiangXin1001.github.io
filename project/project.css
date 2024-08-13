@@ -10,7 +10,7 @@
     margin-left: 150px;
     margin-right: 150px;
   }
-  
+
 .project-box:hover {
 background-color: #f0f0f0;
 transform: scale(1.05);
@@ -26,6 +26,7 @@ margin-right: 10px;
 .project-box p {
 margin: 0;
 font-weight: bold;
+padding: 10px
 }
 .page-title {
 margin-top: 20px;
