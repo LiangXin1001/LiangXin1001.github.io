@@ -52,8 +52,8 @@ div ,section ,article {
  
 .main  {
     /* margin-top: 1em; */
-    padding-left: 9em;
-    padding-right: 9em;
+    padding-left: 4em;
+    padding-right: 3em;
     max-width: 1900px;
     margin-left: auto;
     margin-right: auto;
@@ -162,7 +162,7 @@ li {
     list-style-type: none;
     display: inline-block;
     white-space: nowrap;
-    width: 160px;
+    width: 180px;
     vertical-align: middle;
     display: table-cell;
     color:aqua
