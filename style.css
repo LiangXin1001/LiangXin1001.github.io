@@ -154,7 +154,7 @@ article ,.sidebar ,.sticky{
     margin-right: 60px;
 }
 li {
- 
+   line-height: 1.5;
    font-family:sans-serif;
    list-style: none;
 }
