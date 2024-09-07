@@ -18,7 +18,7 @@ transform: scale(1.05);
 
 .project-box img {
 width: 450px;
-/* height: 250px; */
+height: auto;
 margin-right: 10px;
 
 }
