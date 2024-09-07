@@ -226,3 +226,8 @@ li {
 .design-link {
     line-height: normal; /* 恢复正常的行间距 */
 }
+
+.news-section li {
+    margin-bottom: 15px;  /* 增加每个新闻项之间的间距，可以根据需要调整 */
+    line-height: 1.6;  /* 如果需要调整行高，也可以适当设置 */
+}
