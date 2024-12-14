@@ -65,7 +65,7 @@ div ,section ,article {
     /* background-color: rgb(150, 218, 236); */
   
     position:relative;
-    border-bottom: 1px solid #FFF7FC;
+    border-bottom: 1px solid #FFFFFC;
     z-index: 2;
     height: 60spx;
     left: 0;
@@ -80,7 +80,7 @@ div ,section ,article {
 }
  
 .sidebar {
-    background-color:  #FFF7FC;
+    background-color:  #FFFFFC;
     float: left;
     top: 60px;
     position: fixed;
@@ -88,11 +88,11 @@ div ,section ,article {
     width: 25%;
     min-height: 800px;
     margin-left: 10.6949152542%;
-    border-right: 2px solid #FFF7FC;
+    border-right: 2px solid #FFFFFC;
 	
 }
 .sideson .urls  {
-    background-color:  #FFF7FC;
+    background-color:  #FFFFFC;
 }
 .content ,.navmenu li{
     color:rgb(116, 120, 123);
@@ -131,14 +131,14 @@ article ,.sidebar ,.sticky{
     font-weight: bold;
 }
 .photo {
-    background-color: #FFF7FC;
+    background-color: #FFFFFC;
     padding-bottom: 30px;
 }
 .photo img {
     width:80%;
     height: 80%;
     padding-right: 10%;
-    background-color:  #FFF7FC;
+    background-color:  #FFFFFC;
      
 }
 .schoolimg {
