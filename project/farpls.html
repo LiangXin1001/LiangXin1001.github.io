@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta charset="utf-8" />
+    <title>FARPLS: A Feature-Augmented Robot Trajectory Preference
+            Labeling System to Assist Human Labelers’ Preference Elicitation - Xin Liang</title>
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:site_name" content="Xin Liang" />
+    <meta property="og:title" content="FARPLS: A Feature-Augmented Robot Trajectory Preference
+            Labeling System to Assist Human Labelers’ Preference Elicitation" />
+    <link rel="canonical" href="farpls.html" />
+    <meta property="og:url" content="farpls.html" />
+    <script type="application/ld+json">
+      {{"@context":"http://schema.org","@type":"Person","name":"Xin Liang","url":"https://liangxin1001.github.io","sameAs":null}}
+    </script>
+    <link href="../feed.xml" type="application/atom+xml" rel="alternate" title="Xin Liang Feed" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';</script>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <meta http-equiv="cleartype" content="on" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link rel="icon" href="../images/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="../assets/css/academicons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyfill/3.111.0/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button><div class="navicon"></div></button>
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="../index.html">Xin Liang</a></li>
+              <li class="masthead__menu-item"><a href="../portfolio/projects.html">Projects</a></li>
+              <li class="masthead__menu-item"><a href="../cv/index.html">CV</a></li>
+              <li class="masthead__menu-item"><a href="../about/index.html">About</a></li>
+              <li id="theme-toggle" class="masthead__menu-item persist tail">
+                <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+              </li>
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="http://schema.org/Person">
+          <div class="author__avatar">
+            <img src="../images/I.jpeg" class="author__avatar" alt="Xin Liang" />
+          </div>
+          <div class="author__content">
+            <h3 class="author__name">Xin Liang (梁馨)</h3>
+            <p class="author__bio">Senior Student @ Tongji University</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>Shanghai, China</li>
+              <li><a href="https://scholar.google.com/citations?user=am2rEXcAAAAJ"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+              <li><a href="https://github.com/LiangXin1001"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+              <li><a href="mailto:XinLiang0920@gmail.com"><i class="fa-solid fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="FARPLS: A Feature-Augmented Robot Trajectory Preference
+            Labeling System to Assist Human Labelers’ Preference Elicitation" />
+        <div class="page__inner-wrap">
+          <header>
+            <h1 class="page__title" itemprop="headline">FARPLS: A Feature-Augmented Robot Trajectory Preference
+            Labeling System to Assist Human Labelers’ Preference Elicitation</h1>
+          </header>
+          <section class="page__content" itemprop="text">
+<header class="main">
+
+</header>
+<div class="main">
+<section class="introduction">
+<br/>
+<img alt="Teachable Robot" class="introimg" src="../images/farpls/FARPLS-interface.png"/>
+<h2>Abstract </h2>
+<p>Preference-based learning aims to align robot task objectives with human values. One of the most common methods to infer human preferences is by pairwise comparisons of robot task trajectories. Traditional comparison-based preference labeling systems seldom support labelers to digest and identify critical differences between complex trajectories recorded in videos. Our formative study (N = 12) suggests that individuals may overlook non-salient task features and establish biased preference criteria during their preference elicitation process because of partial observations. In addition, they may experience mental fatigue when given many pairs to compare, causing their label quality to deteriorate. To mitigate these issues, we propose FARPLS, a Feature-Augmented Robot trajectory Preference Labeling System. FARPLS highlights potential outliers in a wide variety of task features that matter to humans and extracts the corresponding video keyframes for easy review and comparison. It also dynamically adjusts the labeling order according to users’ familiarities, difficulties of the trajectory pair, and level of disagreements. At the same time, the system monitors labelers’ consistency and provides feedback on labeling progress to keep labelers engaged. A between-subjects study (N = 42, 105 pairs of robot pick-and-place trajectories per person) shows that FARPLS can help users establish preference criteria more easily and notice more relevant details in the presented trajectories than the conventional interface. FARPLS also improves labeling consistency and engagement, mitigating challenges in preference elicitation without raising cognitive loads significantly.</p>
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="400" src="https://www.youtube.com/embed/DRFXQpi1fNw" title="YouTube video player" width="400"></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="400" src="https://www.youtube.com/embed/xjnwvlgm09o" title="YouTube video player" width="400"></iframe>
+</div>
+<img alt="Introduction Image" class="introimg" src="../images/farpls/baseline.png"/>
+<img alt="Introduction Image" class="introimg" src="../images/farpls/keyframe-on-hover.png"/>
+<img alt="Introduction Image" class="introimg" height="500px" src="../images/farpls/collision-on-hover.png" width="500px"/>
+<!-- https://youtube.com/shorts/DRFXQpi1fNw?feature=share -->
+<!-- https://youtube.com/shorts/xjnwvlgm09o?feature=share -->
+<p>Arxiv Link: https://arxiv.org/abs/2403.06267</p>
+<h2>Collaborators </h2>
+<p>
+<a href="https://hlyuag.student.ust.hk/">Hanfang Lyu</a>, 
+                <a href=" https://www.linkedin.com/in/yuanchen-sophie-bai-b08076247">Yuanchen Bai</a>, 
+                  Xin Liang, Ujaan Das, 
+                  <a href="https://shichuhan.github.io/">Chuhan Shi</a>, 
+                   Leiliang Gong, Yingchi Li, Mingfei Sun, Ming Ge, 
+                <a href="https://cse.hkust.edu.hk/admin/people/faculty/profile/mxj">Xiaojuan Ma</a> </p>
+<!-- https://www.linkedin.com/in/yuanchen-sophie-bai-b08076247 -->
+</section>
+</div>
+
+          </section>
+          <footer class="page__meta"></footer>
+        </div>
+      </article>
+    </div>
+    <div class="page__footer">
+      <footer>
+        <a href="../sitemap/index.html">Sitemap</a>
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li><a href="https://github.com/LiangXin1001"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+            <li><a href="../feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+          </ul>
+        </div>
+        <div class="page__footeropyright">
+          &copy; 2025 Xin Liang, Powered by <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &
+          <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of
+          <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+          Site last updated 2025-10-09
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/main.min.js"></script>
+  </body>
+</html>
