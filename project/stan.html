@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta charset="utf-8" />
+    <title>⚡ STAN: Sparse adapTAtioN (SAE-based PEFT) - Xin Liang</title>
+
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:site_name" content="Xin Liang" />
+    <meta property="og:title" content="⚡ STAN: Sparse adapTAtioN (SAE-based PEFT)" />
+
+    <link rel="canonical" href="stan.html" />
+    <meta property="og:url" content="stan.html" />
+
+    <script type="application/ld+json">
+      {{"@context":"http://schema.org","@type":"Person","name":"Xin Liang","url":"https://liangxin1001.github.io","sameAs":null}}
+    </script>
+
+    <link href="../feed.xml" type="application/atom+xml" rel="alternate" title="Xin Liang Feed" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <meta http-equiv="cleartype" content="on" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../images/favicon-192x192.png" sizes="192x192" />
+    <link rel="manifest" href="../images/manifest.json" />
+    <link rel="icon" href="../images/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="../assets/css/academicons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyfill/3.111.0/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #f2f3f5;
+        font-size: 0.9rem;
+        margin-right: 8px;
+      }
+      .meta-row {
+        margin: 12px 0 18px 0;
+      }
+      .meta-row a {
+        margin-right: 14px;
+      }
+      .callout {
+        padding: 14px 16px;
+        border-left: 4px solid #d0d5dd;
+        background: #fafafa;
+        border-radius: 6px;
+        margin: 14px 0;
+      }
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.92rem;
+        background: #0b1020;
+        color: #e6edf3;
+        padding: 12px 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      table.stan {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0 18px 0;
+      }
+      table.stan th, table.stan td {
+        border: 1px solid #e5e7eb;
+        padding: 8px 10px;
+        font-size: 0.95rem;
+      }
+      table.stan th {
+        background: #f8fafc;
+        text-align: left;
+      }
+      .smallnote {
+        font-size: 0.92rem;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button><div class="navicon"></div></button>
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg persist">
+                <a href="../index.html">Xin Liang</a>
+              </li>
+              <li class="masthead__menu-item"><a href="../portfolio/projects.html">Projects</a></li>
+              <li class="masthead__menu-item"><a href="../cv/index.html">CV</a></li>
+              <li class="masthead__menu-item"><a href="../about/index.html">About</a></li>
+              <li id="theme-toggle" class="masthead__menu-item persist tail">
+                <a><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+              </li>
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="http://schema.org/Person">
+          <div class="author__avatar">
+            <img src="../images/I.jpeg" class="author__avatar" alt="Xin Liang" />
+          </div>
+          <div class="author__content">
+            <h3 class="author__name">Xin Liang (梁馨)</h3>
+            <p class="author__bio">Senior Student @ Tongji University</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li class="author__desktop">
+                <i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>Shanghai, China
+              </li>
+              <li>
+                <a href="https://scholar.google.com/citations?user=am2rEXcAAAAJ">
+                  <i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/LiangXin1001">
+                  <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub
+                </a>
+              </li>
+              <li>
+                <a href="mailto:XinLiang0920@gmail.com">
+                  <i class="fa-solid fa-envelope icon-pad-right" aria-hidden="true"></i>Email
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="⚡ STAN: Sparse adapTAtioN (SAE-based PEFT)" />
+        <div class="page__inner-wrap">
+          <header>
+            <h1 class="page__title" itemprop="headline">⚡ STAN: Sparse adapTAtioN (SAE-based PEFT)</h1>
+            <div class="meta-row">
+              <span class="badge">PEFT</span>
+              <span class="badge">Sparse Autoencoder</span>
+              <span class="badge">Interpretability</span>
+              <span class="badge">Multi-Modal</span>
+            </div>
+            <div class="meta-row smallnote">
+              Paper: <em>The Chosen Few: Sparse Adaptation for Large Models</em>  
+            </div>
+            <div class="meta-row">
+               
+              <a class="btn btn--primary" href="https://openreview.net/pdf?id=mkx3xkRBkw" onclick="return false;">Paper</a>
+               
+            </div>
+          </header>
+
+          <section class="page__content" itemprop="text">
+            <div class="main">
+              <section class="introduction">
+                <h2>Overview</h2>
+                <p>
+                  STAN (Sparse adapTAtioN) is a parameter-efficient fine-tuning method that replaces the
+                  rigid low-rank constraint (e.g., LoRA) with <strong>input-dependent sparse feature selection</strong>
+                  in a high-dimensional latent space. The key idea is to learn task-specific adaptations via
+                  <strong>sparse activations</strong> inside Sparse Autoencoder (SAE) modules, enabling both stronger
+                  expressivity and improved interpretability.
+                </p>
+
+                <div class="callout">
+                  <strong>Why sparsity?</strong><br />
+                  Instead of compressing updates into a fixed low-rank subspace, sparse adaptation identifies
+                  and selectively activates a small subset of high-dimensional features, supporting a more decomposed
+                  and dynamic fine-tuning process.
+                </div>
+
+                <!-- Optional: add a local figure if you have it -->
+                
+                <h2>Architecture</h2>
+                <img alt="STAN overview" class="introimg" src="../images/STAN/ours.jpg" />
+               
+
+                <h2>Core Formulation</h2>
+                <p>
+                  Similar to LoRA, STAN adds an adaptation term to a frozen pretrained projection. Different from LoRA,
+                  STAN computes the adaptation through an encoder–TopK sparsifier–decoder pipeline:
+                </p>
+                <style>
+                .equation{
+                    background:#fafafa;
+                    border-left:4px solid #d0d5dd;
+                    border-radius:8px;
+                    padding:6px 7px;
+                    margin:12px 0 18px 0;
+                    overflow-x:auto;
+                }
+                </style>
+
+                <div class="equation">
+                    \[
+                    \begin{aligned}
+                    \Delta \mathbf{W}\,\mathbf{x} &= \frac{1}{k}\,\mathbf{D}\,\operatorname{TopK}(\mathbf{E}\mathbf{x}), \\
+                    \mathbf{h} &= \mathbf{W}_0\mathbf{x} + \frac{1}{k}\,\mathbf{D}\,\operatorname{TopK}(\mathbf{E}\mathbf{x}).
+                    \end{aligned}
+                    \]
+                    </div>
+
+
+                <p class="smallnote">
+                  Intuition: <code>topk</code> acts as a dynamic router that selects the most relevant latent features per input,
+                  yielding an input-dependent mixture of subspaces rather than a single fixed low-rank subspace.
+                </p>
+
+                <h2>Highlights</h2>
+                <ul>
+                  <li><strong>Conceptually distinct PEFT:</strong> sparse adaptation via SAEs rather than low-rank decomposition.</li>
+                  <li><strong>Dynamic & flexible updates:</strong> TopK-driven input-dependent feature selection.</li>
+                  <li><strong>Interpretable representations:</strong> sparse and more semantically decomposed latent features.</li>
+                  <li><strong>Broad validation:</strong> language understanding, math &amp; code, vision-language, and diffusion-based generation.</li>
+                </ul>
+
+                <h2>Key Results (Selected)</h2>
+
+                <h3>GLUE (5 tasks, 4 backbones)</h3>
+                <table class="stan">
+                  <thead>
+                    <tr>
+                      <th>Backbone</th>
+                      <th>Method</th>
+                      <th>MNLI</th>
+                      <th>SST-2</th>
+                      <th>QNLI</th>
+                      <th>QQP</th>
+                      <th>CoLA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>RoBERTa-base</td><td>STAN</td><td>0.9303</td><td>0.9495</td><td>0.9408</td><td>0.9242</td><td>0.6191</td>
+                    </tr>
+                    <tr>
+                      <td>RoBERTa-large</td><td>STAN</td><td>0.8919</td><td>0.9610</td><td>0.9489</td><td>0.8957</td><td>0.7400</td>
+                    </tr>
+                    <tr>
+                      <td>DeBERTaV3-base</td><td>STAN</td><td>0.8974</td><td>0.9622</td><td>0.9477</td><td>0.9230</td><td>0.6904</td>
+                    </tr>
+                    <tr>
+                      <td>DeBERTaV3-large</td><td>STAN</td><td>0.9145</td><td>0.9622</td><td>0.9590</td><td>0.9058</td><td>0.7528</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="smallnote">
+                  STAN achieves strong performance across multiple backbones and tasks compared with common PEFT baselines.
+                </p>
+
+                <h3>DeBERTaV3-base (More baselines)</h3>
+                <table class="stan">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>QNLI</th>
+                      <th>MNLI</th>
+                      <th>SST-2</th>
+                      <th>QQP</th>
+                      <th>MRPC</th>
+                      <th>RTE</th>
+                      <th>STSB</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>LoRA</td><td>0.9371</td><td>0.8857</td><td>0.9438</td><td>0.9163</td><td>0.8995</td><td>0.8520</td><td>0.9160</td>
+                    </tr>
+                    <tr>
+                      <td>AdaLoRA</td><td>0.9440</td><td>0.8637</td><td>0.9553</td><td>0.8952</td><td>0.9069</td><td>0.8736</td><td>0.9163</td>
+                    </tr>
+                    <tr>
+                      <td>SoRA</td><td>0.9322</td><td>0.8095</td><td>0.9564</td><td>0.8540</td><td>0.8734</td><td>0.8777</td><td>0.9222</td>
+                    </tr>
+                    <tr>
+                      <td><strong>STAN</strong></td><td><strong>0.9477</strong></td><td><strong>0.8974</strong></td><td><strong>0.9622</strong></td>
+                      <td><strong>0.9230</strong></td><td><strong>0.9166</strong></td><td><strong>0.9114</strong></td><td><strong>0.9277</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>Diffusion Style Alignment (SD3)</h3>
+                <p>
+                  Beyond language and vision-language tasks, STAN also supports structured interventions in diffusion models,
+                  enabling multi-style alignment with strong quantitative and human evaluation results.
+                </p>
+
+                <table class="stan">
+                  <thead>
+                    <tr>
+                      <th>Metric</th>
+                      <th>STAN</th>
+                      <th>LoRA</th>
+                      <th>None</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>CLIP-Score</td><td>0.6694</td><td>0.6645</td><td>0.6556</td></tr>
+                    <tr><td>DINO-Score</td><td>0.4283</td><td>0.4244</td><td>0.4134</td></tr>
+                    <tr><td>Human win rate (STAN vs LoRA)</td><td colspan="3">91.02%</td></tr>
+                  </tbody>
+                </table>
+
+                <h2>Efficiency (Example: LLaVA-1.5-13B)</h2>
+                <table class="stan">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Avg. inference latency / sample (s)</th>
+                      <th>Train tokens / sec</th>
+                      <th>GPU-hours (3 ep)</th>
+                      <th>Peak GPU mem (GB)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>STAN</td><td>0.419</td><td>2359.42</td><td>0.01</td><td>39.62</td>
+                    </tr>
+                    <tr>
+                      <td>LoRA</td><td>0.404</td><td>1533.81</td><td>0.02</td><td>33.53</td>
+                    </tr>
+                  </tbody>
+                </table>
+ 
+ 
+              </section>
+            </div>
+          </section>
+
+          <footer class="page__meta"></footer>
+        </div>
+      </article>
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        <a href="../sitemap/index.html">Sitemap</a>
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            <li>
+              <a href="https://github.com/LiangXin1001"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+            </li>
+            <li>
+              <a href="../feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page__footercopyright">
+          &copy; 2025 Xin Liang, Powered by <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &
+          <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of
+          <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
+          Site last updated 2025-10-09
+        </div>
+      </footer>
+    </div>
+
+    <script src="../assets/js/main.min.js"></script>
+  </body>
+</html>
