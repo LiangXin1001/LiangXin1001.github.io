@@ -1,0 +1,60 @@
+/* Homepage layout overrides. Keep this separate from the generated main.css. */
+#main {
+  width: min(100% - 48px, 1120px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 57.8125em) {
+  #main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  #main .sidebar {
+    position: sticky;
+    top: 88px;
+    flex: 0 0 220px;
+    width: 220px;
+    max-width: 220px;
+    height: auto;
+    margin: 0;
+    padding-top: 0;
+    overflow: visible;
+  }
+
+  #main .page {
+    float: none;
+    width: auto;
+    max-width: 760px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #main .sidebar .author__avatar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main .sidebar {
+    position: sticky;
+    top: 88px;
+    height: auto;
+    padding-top: 0;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 57.8125em) {
+  #main {
+    width: min(100% - 32px, 760px);
+  }
+}
