@@ -1,26 +1,95 @@
 /* Homepage layout overrides. Keep this separate from the generated main.css. */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --home-sidebar-width: 220px;
+  --home-avatar-width: 175px;
+  --home-gap: 56px;
+  --home-page-width: 760px;
+  --home-layout-width: calc(
+    var(--home-sidebar-width) + var(--home-gap) + var(--home-page-width)
+  );
+}
+
+.masthead__inner-wrap {
+  width: min(calc(100% - 48px), var(--home-layout-width));
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.masthead__menu,
+.greedy-nav {
+  width: 100%;
+}
+
+.greedy-nav {
+  display: flex;
+  align-items: center;
+}
+
+.greedy-nav button {
+  display: none;
+}
+
+.greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.greedy-nav .visible-links li {
+  display: block;
+}
+
+.greedy-nav .masthead__menu-item {
+  display: block;
+  margin-left: 0;
+}
+
+.greedy-nav .masthead__menu-item--lg {
+  margin-right: auto;
+}
+
+.greedy-nav a {
+  line-height: 1.5;
+}
+
 #main {
-  width: min(100% - 48px, 1120px);
+  width: min(calc(100% - 48px), var(--home-layout-width));
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
   padding-right: 0;
 }
 
+#main::after {
+  display: none;
+}
+
 @media (min-width: 57.8125em) {
+  .masthead__inner-wrap {
+    padding-left: calc(
+      (var(--home-sidebar-width) - var(--home-avatar-width)) / 2
+    );
+  }
+
   #main {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    gap: 56px;
+    gap: var(--home-gap);
   }
 
   #main .sidebar {
     position: sticky;
     top: 88px;
-    flex: 0 0 220px;
-    width: 220px;
-    max-width: 220px;
+    flex: 0 0 var(--home-sidebar-width);
+    width: var(--home-sidebar-width);
+    max-width: var(--home-sidebar-width);
     height: auto;
     margin: 0;
     padding-top: 0;
@@ -29,11 +98,18 @@
 
   #main .page {
     float: none;
+    flex: 1 1 auto;
     width: auto;
-    max-width: 760px;
+    max-width: var(--home-page-width);
     margin: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  #main .page .page__inner-wrap,
+  #main .page .page__inner-wrap .page__content,
+  #main .page .page__inner-wrap .page__meta {
+    float: none;
   }
 
   #main .sidebar .author__avatar img {
@@ -54,7 +130,34 @@
 }
 
 @media (max-width: 57.8125em) {
+  .masthead__inner-wrap,
   #main {
-    width: min(100% - 32px, 760px);
+    width: min(calc(100% - 32px), 760px);
   }
+}
+
+.home-section {
+  scroll-margin-top: 96px;
+}
+
+.page__content .home-section {
+  clear: both;
+  margin-top: 4rem;
+}
+
+.page__content .home-section h2:first-child {
+  margin-top: 0;
+}
+
+.visitors-map {
+  max-width: 560px;
+  margin: 3rem auto 0;
+}
+
+.project-list {
+  padding-left: 1.25rem;
+}
+
+.project-list li {
+  margin-bottom: 0.8rem;
 }
