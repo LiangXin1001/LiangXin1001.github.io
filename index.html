@@ -9,12 +9,20 @@
     <meta charset="utf-8" />
 
     <!-- begin SEO -->
-    <title>Welcome! - Xin Liang</title>
+    <title>Xin Liang | Multimodal AI Researcher</title>
+    <meta
+      name="description"
+      content="Xin Liang is an incoming PhD student at Indiana University working on multimodal agents, generative AI, and human-centered AI. First author of SlideGen, accepted to ACM MM 2026."
+    />
     <meta property="og:locale" content="en-US" />
     <meta property="og:site_name" content="Xin Liang" />
-    <meta property="og:title" content="Welcome!" />
-    <link rel="canonical" href="index.html" />
-    <meta property="og:url" content="index.html" />
+    <meta property="og:title" content="Xin Liang | Multimodal AI Researcher" />
+    <meta
+      property="og:description"
+      content="Incoming PhD student at Indiana University. First author of SlideGen (ACM MM 2026)."
+    />
+    <link rel="canonical" href="https://liangxin1001.github.io/" />
+    <meta property="og:url" content="https://liangxin1001.github.io/" />
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -25,13 +33,6 @@
       }
     </script>
     <!-- end SEO -->
-
-    <link
-      href="feed.xml"
-      type="application/atom+xml"
-      rel="alternate"
-      title="Xin Liang Feed"
-    />
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True" />
@@ -53,26 +54,25 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/apple-touch-icon-180x180.png"
+      href="icon/Favicon/apple-icon-180x180.png"
     />
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-32x32.png"
+      href="icon/Favicon/favicon-32x32.png"
       sizes="32x32"
     />
     <link
       rel="icon"
       type="image/png"
-      href="images/favicon-192x192.png"
+      href="icon/Favicon/android-icon-192x192.png"
       sizes="192x192"
     />
-    <link rel="manifest" href="images/manifest.json" />
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="manifest" href="icon/Favicon/manifest.json" />
+    <link rel="icon" href="icon/Favicon/favicon.ico" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="assets/css/academicons.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet" />
     <style>
       body,
       .page__content p,
@@ -80,15 +80,13 @@
       .author__bio,
       .author__urls,
       .greedy-nav a,
-      .page__footer ,
+      .page__footer,
       h1, h2, h3,
       .page__title,
       .author__name,
       .masthead__menu-item a {
         font-family: 'Fredoka', sans-serif !important;
       }
-
-       
     </style>
     <!-- Support for MathJax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/polyfill/3.111.0/polyfill.min.js?features=es6"></script>
@@ -122,7 +120,13 @@
                 <a href="#welcome">Xin Liang</a>
               </li>
               <li class="masthead__menu-item">
-                <a href="#projects">Projects</a>
+                <a href="#slidegen">SlideGen</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="#news">News</a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="#research">Research</a>
               </li>
               <li class="masthead__menu-item">
                 <a href="#cv">CV</a>
@@ -157,8 +161,8 @@
           </div>
 
           <div class="author__content">
-            <h3 class="author__name">Xin Liang (梁馨)</h3> 
-            <p class="author__bio">B.E. in CS @ Tongji University</p>
+            <h3 class="author__name">Xin Liang <span>(梁馨)</span></h3>
+            <p class="author__bio">Incoming PhD Student<br />Indiana University</p>
           </div>
 
           <div class="author__urls-wrapper">
@@ -171,7 +175,7 @@
                   class="fa-solid fa-location-dot icon-pad-right"
                   aria-hidden="true"
                 ></i>
-                Shanghai, China
+                Bloomington, IN
               </li>
 
               <!-- Academic websites -->
@@ -204,6 +208,12 @@
                   >Email</a
                 >
               </li>
+              <li>
+                <a href="Xin_Liang.pdf" target="_blank" rel="noopener"
+                  ><i class="fa-solid fa-file-lines icon-pad-right" aria-hidden="true"></i
+                  >Curriculum Vitae</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -213,65 +223,163 @@
         <meta itemprop="headline" content="Welcome! 👋" />
 
         <div class="page__inner-wrap">
-          <header id="welcome" class="home-section">
-            <h1 class="page__title" itemprop="headline">Welcome!</h1>
+          <header id="welcome" class="home-hero">
+            <p class="hero-kicker">Multimodal AI · AI Agents · Human-Centered AI</p>
+            <h1 class="page__title" itemprop="headline">
+              Welcome! 👋
+            </h1>
+            
           </header>
 
           <section class="page__content" itemprop="text">
-            <p>
-              Hi! My name is <strong>Xin Liang (梁馨)</strong>.
-              I'm an incoming PhD student at Indiana University, advised by <a href="https://jiangpenghe.github.io/" target="_blank">Prof. Jiangpeng He</a>. Before that, I graduated from  Tongji University with a Bachelor of Engineering in Computer Science, and I previously interned at <a href="https://www.stepfun.com/company#step1v" target="_blank">Stepfun</a>, working on coding agents and multi-turn dialogue.
-              If you have ideas you'd like to discuss or just want to chat, feel free to drop me an <a href="mailto:liangxin@iu.edu">email</a>. I'm always happy to set up a meeting!
+            <p class="intro-copy">
+              I am an incoming PhD student at
+              <strong>Indiana University</strong>, advised by
+              <a href="https://jiangpenghe.github.io/" target="_blank" rel="noopener">Prof. Jiangpeng He</a>.
+              I received my B.E. in Computer Science from Tongji University and
+              have conducted research at Stony Brook University, the University
+              of Rochester, and HKUST. I also worked at
+              <a href="https://www.stepfun.com/company#step1v" target="_blank" rel="noopener">StepFun</a>
+              on coding agents and multi-turn dialogue.
             </p>
 
-            <p>
-              You can browse my
-              <a href="#projects">projects</a> and
-              <a href="#cv">CV</a>. Feel free to reach out via
-              <a href="mailto:XinLiang0920@gmail.com">email</a>.
-            </p>
+            <section id="news" class="home-section">
+              <div class="section-heading">
+                <p class="section-label">Latest Updates</p>
+                <h2>News</h2>
+              </div>
+              <ol class="news-timeline">
+                <li class="news-featured">
+                  <time datetime="2026">2026</time>
+                  <div>
+                    🎉🎆 Thrilled to share that
+                    <strong>SlideGen was accepted to ACM Multimedia 2026!</strong>
+                    I led this work as first author—what an exciting milestone!
+                  </div>
+                </li>
+                <li>
+                  <time datetime="2025">2025</time>
+                  <div>
+                    🎓 Excited to begin my PhD journey at
+                    <strong>Indiana University</strong>, advised by Prof. Jiangpeng He!
+                  </div>
+                </li>
+                <li>
+                  <time datetime="2025">2025</time>
+                  <div>
+                    🔬 After beginning my internship with Prof. Chenliang Xu's group in 2024,
+                    I was delighted to join <strong>Prof. Chenyu You's group</strong>
+                    at Stony Brook University as a research intern!
+                  </div>
+                </li>
+                <li>
+                  <time datetime="2024">2024</time>
+                  <div>
+                    ✨ Began my research internship with
+                    <strong>Prof. Chenliang Xu's group</strong> at the University of Rochester!
+                  </div>
+                </li>
+                <li>
+                  <time datetime="2024">2024</time>
+                  <div>
+                    🎉 Our work <a href="https://BioMed-VITAL.github.io" target="_blank" rel="noopener"><strong>BioMed-VITAL</strong></a>
+                    was accepted to <strong>NeurIPS 2024</strong>! I contributed as the second author.
+                  </div>
+                </li>
+                <li>
+                  <time datetime="2024-07">Summer 2024</time>
+                  <div>☀️ Had a wonderful learning experience at a summer school at <strong>UC Berkeley</strong>!</div>
+                </li>
+                <li>
+                  <time datetime="2024">2024</time>
+                  <div>
+                    🤖🎉 Our robot trajectory labeling work
+                    <a href="project/farpls.html"><strong>FARPLS</strong></a> was
+                    accepted to <strong>ACM IUI 2024</strong>!
+                  </div>
+                </li>
+                <li>
+                  <time datetime="2023">2023</time>
+                  <div>
+                    ✨ Excited to join <strong>Prof. Xiaojuan Ma's group</strong>
+                    at HKUST as a research intern!
+                  </div>
+                </li>
+              </ol>
+            </section>
 
-            <section id="projects" class="home-section">
-              <h2>Projects</h2>
-              <p>Click each project to see more details.</p>
-
-              <ul class="project-list">
-                <li>
-                  <a href="https://y-research-sbu.github.io/SlideGen/">
-                    ✨ SlideGen: Collaborative Multimodal Agents for Scientific Slide Generation
-                  </a>
-                </li>
-                <li>
-                  <a href="project/farpls.html">
-                    FARPLS: Feature-Augmented Robot Trajectory Preference Labeling System
-                  </a>
-                </li>
-                <li>
-                  <a href="project/factlens.html">
-                    FactLENS: A Decentralized News Validation Ecosystem
-                  </a>
-                </li>
-                <li>
-                  <a href="project/journeyCam.html">
-                    JourneyCam: VR-Assisted Photography Teaching App
-                  </a>
-                </li>
-                <li>
-                  <a href="project/marl.html">
-                    AI Agent as Urban Planner (Consensus-based MARL)
-                  </a>
-                </li>
-              </ul>
+            <section id="research" class="home-section">
+              <div class="section-heading">
+                <p class="section-label">Selected Work</p>
+                <h2>Research &amp; Projects</h2>
+              </div>
+              <div class="research-grid">
+                <article id="slidegen" class="research-card research-card--featured">
+                  <a class="card-cover-link" href="https://y-research-sbu.github.io/SlideGen/" target="_blank" rel="noopener" aria-label="Open the SlideGen project page"></a>
+                  <div class="card-meta"><span>ACM MM 2026</span><span>First Author</span></div>
+                  <h3>SlideGen</h3>
+                  <p>Collaborative multimodal agents for automatic scientific slide generation.</p>
+                  <div class="project-actions" aria-label="SlideGen links">
+                    <a href="https://y-research-sbu.github.io/SlideGen/" target="_blank" rel="noopener">Project <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/Y-Research-SBU/SlideGen" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                    <a href="https://y-research-sbu.github.io/SlideGen/video/demo_small.mp4" target="_blank" rel="noopener"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Demo</a>
+                  </div>
+                </article>
+                <article class="research-card">
+                  <a class="card-cover-link" href="https://BioMed-VITAL.github.io" target="_blank" rel="noopener" aria-label="Open the BioMed-VITAL project page"></a>
+                  <div class="card-meta"><span>NeurIPS 2024</span><span>Second Author</span></div>
+                  <h3>BioMed-VITAL</h3>
+                  <p>Biomedical visual instruction tuning with clinician preference alignment.</p>
+                  <a href="https://BioMed-VITAL.github.io" target="_blank" rel="noopener">View project <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="research-card">
+                  <a class="card-cover-link" href="project/farpls.html" aria-label="Open the FARPLS project page"></a>
+                  <div class="card-meta"><span>ACM IUI 2024</span><span>Robotics + HCI</span></div>
+                  <h3>FARPLS</h3>
+                  <p>A feature-augmented system for labeling robot trajectory preferences.</p>
+                  <a href="project/farpls.html">View project <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="research-card">
+                  <a class="card-cover-link" href="project/marl.html" aria-label="Open the AI Agent as Urban Planner project page"></a>
+                  <div class="card-meta"><span>Multi-Agent AI</span><span>Urban Computing</span></div>
+                  <h3>AI Agent as Urban Planner</h3>
+                  <p>Consensus-based multi-agent reinforcement learning for participatory planning.</p>
+                  <a href="project/marl.html">View project <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="research-card">
+                  <a class="card-cover-link" href="project/factlens.html" aria-label="Open the FactLENS project page"></a>
+                  <div class="card-meta"><span>Trustworthy Information</span><span>Web3</span></div>
+                  <h3>FactLENS</h3>
+                  <p>A decentralized ecosystem for transparent and collaborative news validation.</p>
+                  <a href="project/factlens.html">View project <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="research-card">
+                  <a class="card-cover-link" href="project/journeyCam.html" aria-label="Open the JourneyCam project page"></a>
+                  <div class="card-meta"><span>Virtual Reality</span><span>Learning</span></div>
+                  <h3>JourneyCam</h3>
+                  <p>A VR-assisted photography learning experience with interactive guidance.</p>
+                  <a href="project/journeyCam.html">View project <span aria-hidden="true">→</span></a>
+                </article>
+              </div>
             </section>
 
             <section id="cv" class="home-section">
-              <h2>CV</h2>
-              <p>
-                More details in PDF:
-                <a href="Xin_Liang.pdf" target="_blank" rel="noopener">CV</a>
-              </p>
+              <div class="section-heading cv-heading">
+                <div>
+                  <p class="section-label">Background</p>
+                  <h2>Curriculum Vitae</h2>
+                </div>
+                <a class="cv-download" href="Xin_Liang.pdf" target="_blank" rel="noopener">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF
+                </a>
+              </div>
 
               <h2>Education</h2>
+              <p>
+                <strong>Indiana University Bloomington</strong><br />
+                <strong>PhD Student</strong>, advised by Prof. Jiangpeng He<br />
+                <em>Incoming</em>
+              </p>
               <p>
                 <strong>Tongji University, Shanghai, China</strong><br />
                 <strong>B.E. in Computer Science</strong>, GPA: 90.4/100,
@@ -280,6 +388,11 @@
               </p>
 
               <h2>Experience</h2>
+              <p><strong>Research Intern, StepFun</strong></p>
+              <ul>
+                <li>Coding agents and multi-turn dialogue systems.</li>
+              </ul>
+
               <p><strong>Research Intern, Stony Brook University</strong></p>
               <ul>
                 <li>Sparse adaptation (STAN) with input-dependent routing; consistent gains on LMs/VLMs.</li>
@@ -303,25 +416,10 @@
                 <li>Differentiable NAS via zeroth-order approximation; ICASSP 2023 poster.</li>
               </ul>
 
-              <h2>Technical Skills</h2>
-              <p>
-                <strong>Languages:</strong> Python, C/C++, SQL, JavaScript, HTML/CSS<br />
-                <strong>Model Serving &amp; Inference:</strong> vLLM (OpenAI-compatible API), FastAPI<br />
-                <strong>Model Training &amp; Fine-tuning:</strong> Hugging Face Transformers, ms-swift (ModelScope Swift), PEFT<br />
-                <strong>Frameworks:</strong> React, Node.js, Flask, robosuite<br />
-                <strong>Developer Tools:</strong> Git, Docker, VS Code, Visual Studio, PyCharm, Linux<br />
-                <strong>Libraries:</strong> pandas, NumPy, Matplotlib<br />
-                <strong>Design Tools:</strong> Adobe Photoshop, Illustrator, InDesign, Premiere Pro, After Effects
+              <p class="cv-note">
+                See the <a href="Xin_Liang.pdf" target="_blank" rel="noopener">full CV</a>
+                for publications, technical skills, honors, and additional experience.
               </p>
- 
-
-              <h2>Honors &amp; Awards</h2>
-              <ul>
-                <li>Mobile App Innovation Competition - Second Prize, Sep. 2023</li>
-                <li>Asia Pacific Cup Mathematical Modeling - Second Prize, May 2023</li>
-                <li>Shanghai College Student Mathematical Modeling - Third Prize, Nov. 2022</li>
-                <li>"Internet+" Innovation and Entrepreneurship Competition - Bronze Award, Sep. 2022</li>
-              </ul>
             </section>
 
             <div id="visitors-map-wrap" class="visitors-map">
@@ -342,10 +440,6 @@
 
     <div class="page__footer">
       <footer>
-        <!-- start custom footer snippets -->
-        <a href="sitemap/index.html">Sitemap</a>
-        <!-- end custom footer snippets -->
-
         <div class="page__footer-follow">
           <ul class="social-icons">
             <li><strong>Follow:</strong></li>
@@ -354,17 +448,11 @@
                 ><i class="fab fa-github" aria-hidden="true"></i> GitHub</a
               >
             </li>
-            <li>
-              <a href="feed.xml"
-                ><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i>
-                Feed</a
-              >
-            </li>
           </ul>
         </div>
 
         <div class="page__footer-copyright">
-          &copy; 2025 Xin Liang, Powered by
+          &copy; 2026 Xin Liang, Powered by
           <a href="http://jekyllrb.com/" rel="nofollow">Jekyll</a> &
           <a
             href="https://github.com/academicpages/academicpages.github.io"
@@ -375,7 +463,7 @@
             rel="nofollow"
             >Minimal Mistakes</a
           >.<br />
-          Site last updated 2025-10-09
+          Site last updated 2026-08-07
         </div>
       </footer>
     </div>
