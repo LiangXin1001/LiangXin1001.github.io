@@ -364,14 +364,29 @@ body {
   border-radius: 16px;
   background: var(--home-card);
   box-shadow: 0 8px 28px rgba(30, 51, 91, 0.05);
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  transform-origin: center;
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 260ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
   cursor: pointer;
+  will-change: transform;
 }
 
 .research-card:hover {
-  border-color: color-mix(in srgb, var(--home-blue) 38%, var(--home-line));
-  box-shadow: var(--home-shadow);
-  transform: translateY(-3px);
+  z-index: 3;
+  border-color: color-mix(in srgb, var(--home-blue) 55%, var(--home-line));
+  box-shadow: 0 22px 52px rgba(30, 51, 91, 0.18);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.research-card:hover h3 {
+  color: var(--home-blue);
+}
+
+.research-card:active {
+  transform: translateY(-2px) scale(0.995);
 }
 
 .research-card--featured {
@@ -568,5 +583,11 @@ body {
 
   .research-card {
     transition: none;
+    will-change: auto;
+  }
+
+  .research-card:hover,
+  .research-card:active {
+    transform: none;
   }
 }
