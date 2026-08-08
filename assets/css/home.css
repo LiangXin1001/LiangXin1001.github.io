@@ -438,6 +438,28 @@ body {
   line-height: 1.65;
 }
 
+.publication-info {
+  margin: -0.35rem 0 1rem;
+  color: var(--home-muted);
+  font-size: calc(0.72rem + 1pt);
+  line-height: 1.55;
+}
+
+.paper-authors,
+.paper-venue {
+  margin-top: 0.28rem;
+}
+
+.paper-label {
+  color: var(--home-ink);
+  font-weight: 500;
+}
+
+.self-author {
+  color: var(--home-blue);
+  font-weight: 500;
+}
+
 .research-card > a {
   position: relative;
   z-index: 2;
